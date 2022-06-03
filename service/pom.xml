@@ -13,9 +13,34 @@
     <packaging>pom</packaging>
     <modules>
         <module>service_user</module>
+        <module>service_hosp</module>
+        <module>service_cmn</module>
+        <module>service_msm</module>
+        <module>service_oss</module>
+        <module>service_order</module>
+        <module>service_task</module>
+        <module>service_statistics</module>
     </modules>
 
     <dependencies>
+
+        <!--引入model依赖-->
+        <dependency>
+            <groupId>com.mlf</groupId>
+            <artifactId>model</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.mlf</groupId>
+            <artifactId>service_util</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.mlf</groupId>
+            <artifactId>common_util</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
         <!--web-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -37,21 +62,26 @@
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional>
         </dependency>
-        <!-- 服务调用feign -->
+
+
+        <!--springcloud 的相关依赖  一开始部署可以先注释掉-->
+      <!--   服务调用feign-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
-        <!-- 服务注册 -->
+
+        <!-- nacos注册中心  服务注册 -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
+
         <!-- 流量控制 -->
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.alibaba.cloud</groupId>-->
+            <!--<artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>-->
+        <!--</dependency>-->
     </dependencies>
     <build>
         <plugins>
