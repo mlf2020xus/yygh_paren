@@ -11,5 +11,24 @@
 
     <artifactId>common_util</artifactId>
 
+  <dependencies>
+      <dependency>
+          <groupId>joda-time</groupId>
+          <artifactId>joda-time</artifactId>
+      </dependency>
+
+    <!--引入JWT 利用JWT生成token-->
+      <dependency>
+          <groupId>io.jsonwebtoken</groupId>
+          <artifactId>jjwt</artifactId>
+      </dependency>
+
+      <!--引入httpclient-->
+      <dependency>
+          <groupId>org.apache.httpcomponents</groupId>
+          <artifactId>httpclient</artifactId>
+      </dependency>
+  </dependencies>
+
 
 </project>
